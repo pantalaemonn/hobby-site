@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Site</title>
+    <meta name="description" content="A simple, generic starter index.html" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Page header / navigation -->
+    <header>
+      <div class="container">
+        <a class="brand" href="/">My Site</a>
+        <button
+          id="navToggle"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+        <nav id="primary-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <section id="home" class="hero" aria-labelledby="home-heading">
+        <div class="container">
+          <h1 id="home-heading">Welcome to My Site</h1>
+          <p>Short tagline or introduction goes here.</p>
+          <p><a class="cta" href="#projects">See my work</a></p>
+        </div>
+      </section>
+
+      <section id="about" class="container" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <p>Describe yourself or the site. Keep it brief and focused.</p>
+      </section>
+
+      <section
+        id="projects"
+        class="container"
+        aria-labelledby="projects-heading"
+      >
+        <h2 id="projects-heading">Projects</h2>
+        <ul class="projects-list">
+          <li>
+            <h3>Project One</h3>
+            <p>Short description and link.</p>
+          </li>
+          <li>
+            <h3>Project Two</h3>
+            <p>Short description and link.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="container" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <form action="#" method="post" aria-label="Contact form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> My Site. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Minimal scripts: year and simple nav toggle -->
+    <script>
+      // Set current year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile nav toggle
+      const navToggle = document.getElementById("navToggle");
+      const primaryNav = document.getElementById("primary-nav");
+      navToggle.addEventListener("click", () => {
+        const expanded =
+          navToggle.getAttribute("aria-expanded") === "true" || false;
+        navToggle.setAttribute("aria-expanded", !expanded);
+        primaryNav.style.display = expanded ? "" : "block";
+      });
+    </script>
+  </body>
+</html>
