@@ -53,7 +53,7 @@ nav a:hover {
 .main-wrapper {
   background-color: #f34f34;
   background-image: url("home_bg0.png");
-  background-repeat: round;
+  background-repeat: repeat-x;
 }
 
 main {
@@ -61,17 +61,12 @@ main {
   flex-direction: column;
   padding: 0rem;
   margin: 0 auto;
-  background-image: url("home_bg1_temp.png");
-  background-size: cover;
   max-width: 1147px;
   width: 100%;
-  min-height: 507px;
 }
 
 .content-wrapper {
-  background-color: #432d29;
-  background-image: url("main_bg.png");
-  background-repeat: repeat-x;
+  background-color: #333333;
 }
 
 .content {
@@ -79,12 +74,8 @@ main {
   flex-direction: column;
   padding: 0rem;
   margin: 0 auto;
-  background-image: url("home_bg2_temp.png");
-  background-size: auto;
-  background-repeat: no-repeat;
   max-width: 1147px;
   width: 100%;
-  min-height: 559px;
 }
 
 .gallery {
@@ -95,20 +86,25 @@ main {
 }
 
 .more-info {
-  flex: 6;
+  flex: 5;
   text-align: left;
 }
 
 .more-info img {
-  padding-top: 430px;
+  padding-top: 0px;
 }
 
 .streaming-info {
-  flex: 4;
-  text-align: right;
-  background-image: url("listen_bg.png");
-  background-position: top right;
-  background-repeat: no-repeat;
+  flex: 5;
+  text-align: left;
+  align-content: center;
+}
+
+.streaming-info p {
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: Georgia, serif;
+  padding-left: 12rem;
 }
 
 .audio-player {
@@ -130,25 +126,30 @@ audio {
 .bio {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
   color: #f34f34;
-  font-size: 1.5rem;
-  padding-top: 2rem;
+  font-size: 1.4rem;
   font-family: Georgia, serif;
-  line-height: 2.6rem;
 }
 
 .about-me {
-  flex: 6;
-  padding: 1rem;
+  flex: 5;
+  padding: 1.8rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
   text-align: left;
 }
 
 .about-me p {
-  border-top: 1px solid #fff;
-  padding-top: 0.6rem;
-  padding-bottom: 4rem;
-  text-align: justify;
+  text-align: right;
+}
+
+.bio p {
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.bio p span {
+  color: #fff;
 }
 
 .about-me h3 {
@@ -156,37 +157,48 @@ audio {
   font-size: 2.8rem;
   font-style: italic;
   padding-bottom: 0.6rem;
+  text-align: right;
+  color: #fff;
 }
 
 .art-img {
-  flex: 4;
-  padding: 1rem;
+  flex: 5;
+  text-align: left;
+  padding: 1.8rem;
+}
+
+.art-img p {
   text-align: left;
 }
 
+.art-img p span {
+  color: #fff;
+}
+
+.art-img a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .tour-dates-wrapper {
-  background-color: #5278b1;
-  background-image: url("tour_bg.png");
-  background-repeat: repeat-x;
+  background-color: #b2b2b2;
 }
 
 .tour-dates {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 1rem;
-  padding-bottom: 2rem;
-  font-family: Georgia, serif;
-  line-height: 1.6rem;
+  font-family: "Quintessential", serif;
   max-width: 1147px;
   width: 100%;
   margin: 0 auto;
+  padding-left: 2rem;
 }
 
-.tour-date:nth-child(odd) {
-  background-color: #4a6ea5;
+.tour-dates p {
+  font-size: 2.6rem;
+  text-align: left;
+  color: #333;
 }
 
 .tour-dates h1 {
@@ -196,14 +208,20 @@ audio {
   padding-bottom: 0.6rem;
   margin-bottom: 0.5rem;
   width: 100%;
-  color: #432d29;
+  color: #fff;
 }
 
-.tour-date {
-  flex: 33%;
-  padding: 1rem;
+.lyric-lines {
+  flex: 7;
   text-align: left;
-  border-top: 4px solid #648dcb;
+  background-image: url("lyrics_bg2.jpg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  align-content: center;
+}
+
+.lyric-img {
+  flex: 3;
 }
 
 footer {
@@ -232,6 +250,18 @@ h2 {
   margin: 0 auto;
 }
 
+.major-mono-display-regular {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @media (max-width: 900px) {
   .gallery {
     flex-direction: column;
@@ -253,17 +283,48 @@ h2 {
     gap: 1rem;
   }
 
+  main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .tour-dates {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .lyric-lines {
+    background-image: none;
+  }
+
   .about-me {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    display: none;
   }
 
   .art-piece {
     margin-bottom: 1rem;
   }
 
+  .art-img {
+    text-align: -webkit-center;
+  }
+
+  .more-info {
+    display: none;
+  }
   .more-info img {
     padding-top: 0px;
+  }
+
+  .streaming-info {
+    text-align: left;
+    background-image: none;
+  }
+
+  .streaming-info p {
+    padding-left: 0rem;
   }
 
   main {
@@ -272,15 +333,5 @@ h2 {
 
   .gallery {
     min-height: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .streaming-info {
-    background-position: unset;
-  }
-
-  .audio-player {
-    text-align: left;
   }
 }

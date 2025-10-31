@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Saebre // Lyrics</title>
+    <link rel="stylesheet" href="style_contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <header>
+        <div class="site-title">
+          <img src="saebre_logo.png" alt="Saebre Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="lyrics.html">Lyrics</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="main-wrapper">
+      <main>
+        <section class="gallery">
+          <div class="more-info">
+            <img src="contact_bg1.jpg" alt="The Road Goes Ever On And On" />
+          </div>
+          <div class="streaming-info">
+            <form
+              action="https://formspree.io/f/mkgprlyr"
+              method="POST"
+              class="max-w-xl mx-auto p-6 bg-transparent rounded-lg space-y-6"
+            >
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700"
+                  >Your email:</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  class="mt-1 block w-full px-4 py-2 border border-orange-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700"
+                  >Your message:</label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  required
+                  class="mt-1 block w-full px-4 py-2 border border-orange-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                ></textarea>
+              </div>
+
+              <div>
+                <label
+                  for="sendername"
+                  class="block text-sm font-medium text-gray-700"
+                  >Your name:</label
+                >
+                <input
+                  type="text"
+                  name="sendername"
+                  id="sendername"
+                  class="mt-1 block w-full px-4 py-2 border border-orange-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="contact"
+                  class="block text-sm font-medium text-gray-700"
+                  >Your contact details:</label
+                >
+                <input
+                  type="text"
+                  name="contact"
+                  id="contact"
+                  class="mt-1 block w-full px-4 py-2 border border-orange-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="w-full bg-gray-700 text-white font-semibold py-2 px-4 rounded-md hover:bg-gray-500 transition duration-200"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="content-wrapper">
+      <div class="content">
+        <section class="bio">
+          <div class="about-me">
+            <img src="contact_bg2.jpg" alt="And On And On" />
+          </div>
+          <div class="art-img">
+            <p>
+              i'm available for
+              <span>bookings, collaborations, and commissions</span>. feel free
+              to reach out via the contact form above or email me directly at
+              <a href="mailto:cass@saebre.co.uk">enquiries@saebre.co.uk</a>.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 Saebre. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
